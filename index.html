@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FryCuisine – Food Stories Worth Savoring</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════ HEADER ═══════════════ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🌿</span>
+        <span class="logo-text">Fry<em>Cuisine</em></span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Recipes</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-search" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <a href="#newsletter" class="btn-subscribe">Subscribe</a>
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════ HERO SLIDER ═══════════════ -->
+  <section class="hero-slider" id="hero">
+    <div class="slides-track" id="slides-track">
+
+      <!-- Slide 1 -->
+      <div class="slide slide--1">
+        <div class="slide-bg"></div>
+        <div class="slide-content container">
+          <span class="slide-eyebrow">Featured Recipe</span>
+          <h1 class="slide-title">The Art of<br/><em>Slow-Roasted</em><br/>Sunday Lamb</h1>
+          <p class="slide-desc">Six hours in the oven, a lifetime on your memory. Rosemary, garlic, and patience — the holy trinity of a perfect roast.</p>
+          <div class="slide-cta-group">
+            <a href="#" class="btn-primary">Read the Recipe →</a>
+            <a href="#blog" class="btn-ghost">Explore Blog</a>
+          </div>
+          <div class="slide-meta">
+            <span>⏱ 6 hrs 20 min</span>
+            <span>🍽 Serves 8</span>
+            <span>⭐ 4.9</span>
+          </div>
+        </div>
+        <div class="slide-image-wrap">
+          <div class="slide-image" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?w=900&auto=format&fit=crop&q=80')"></div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide slide--2">
+        <div class="slide-bg"></div>
+        <div class="slide-content container">
+          <span class="slide-eyebrow">Morning Ritual</span>
+          <h1 class="slide-title">Stack It High:<br/><em>Ricotta</em><br/>Cloud Pancakes</h1>
+          <p class="slide-desc">Impossibly fluffy, kissed with lemon zest and served with fresh berries. Weekend mornings just found their purpose.</p>
+          <div class="slide-cta-group">
+            <a href="#" class="btn-primary">Read the Recipe →</a>
+            <a href="#blog" class="btn-ghost">Explore Blog</a>
+          </div>
+          <div class="slide-meta">
+            <span>⏱ 25 min</span>
+            <span>🍽 Serves 4</span>
+            <span>⭐ 4.8</span>
+          </div>
+        </div>
+        <div class="slide-image-wrap">
+          <div class="slide-image" style="background-image:url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=900&auto=format&fit=crop&q=80')"></div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide slide--3">
+        <div class="slide-bg"></div>
+        <div class="slide-content container">
+          <span class="slide-eyebrow">Summer Special</span>
+          <h1 class="slide-title">Grilled Peach<br/><em>Burrata</em><br/>Salad</h1>
+          <p class="slide-desc">Charred sweetness meets creamy cool. A salad that makes summer worth the heat, drizzled with aged balsamic and wild honey.</p>
+          <div class="slide-cta-group">
+            <a href="#" class="btn-primary">Read the Recipe →</a>
+            <a href="#blog" class="btn-ghost">Explore Blog</a>
+          </div>
+          <div class="slide-meta">
+            <span>⏱ 15 min</span>
+            <span>🍽 Serves 2</span>
+            <span>⭐ 5.0</span>
+          </div>
+        </div>
+        <div class="slide-image-wrap">
+          <div class="slide-image" style="background-image:url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=900&auto=format&fit=crop&q=80')"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Slider Controls -->
+    <button class="slider-btn slider-btn--prev" id="prev-btn" aria-label="Previous">&#8592;</button>
+    <button class="slider-btn slider-btn--next" id="next-btn" aria-label="Next">&#8594;</button>
+    <div class="slider-dots" id="slider-dots">
+      <button class="dot active" data-index="0"></button>
+      <button class="dot" data-index="1"></button>
+      <button class="dot" data-index="2"></button>
+    </div>
+    <div class="slider-progress-bar" id="progress-bar"></div>
+  </section>
+
+  <!-- ═══════════════ CATEGORIES STRIP ═══════════════ -->
+  <section class="categories-strip" id="categories">
+    <div class="container">
+      <div class="categories-grid">
+        <a href="#" class="cat-card">
+          <div class="cat-icon">🍳</div>
+          <span class="cat-name">Breakfast</span>
+          <span class="cat-count">42 recipes</span>
+        </a>
+        <a href="#" class="cat-card">
+          <div class="cat-icon">🥗</div>
+          <span class="cat-name">Lunch</span>
+          <span class="cat-count">58 recipes</span>
+        </a>
+        <a href="#" class="cat-card">
+          <div class="cat-icon">🍝</div>
+          <span class="cat-name">Dinner</span>
+          <span class="cat-count">76 recipes</span>
+        </a>
+        <a href="#" class="cat-card">
+          <div class="cat-icon">🧁</div>
+          <span class="cat-name">Snacks</span>
+          <span class="cat-count">31 recipes</span>
+        </a>
+        <a href="#" class="cat-card">
+          <div class="cat-icon">🍰</div>
+          <span class="cat-name">Desserts</span>
+          <span class="cat-count">49 recipes</span>
+        </a>
+        <a href="#" class="cat-card">
+          <div class="cat-icon">🍹</div>
+          <span class="cat-name">Drinks</span>
+          <span class="cat-count">27 recipes</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ MASONRY BLOG ═══════════════ -->
+  <section class="blog-masonry section-pad" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">The Kitchen Diary</span>
+        <h2 class="section-title">Latest From <em>FryCuisine</em></h2>
+        <p class="section-sub">Stories, techniques, and recipes from our kitchen table to yours.</p>
+      </div>
+
+      <div class="masonry-grid" id="masonry-grid">
+
+        <!-- Card 1 – tall -->
+        <article class="m-card m-card--tall">
+          <a href="#" class="m-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&auto=format&fit=crop&q=80" alt="Butter Chicken" class="m-card-img" loading="lazy"/>
+            <span class="m-card-cat">Dinner</span>
+          </a>
+          <div class="m-card-body">
+            <div class="m-card-meta"><span class="m-card-date">June 12, 2025</span><span class="m-card-read">8 min read</span></div>
+            <h3 class="m-card-title"><a href="#">The Perfect Butter Chicken: A 48-Hour Journey Worth Every Minute</a></h3>
+            <p class="m-card-excerpt">We marinated overnight, slow-cooked for hours, and tasted at every stage. Here's everything we learned about the dish that redefined Indian comfort food.</p>
+            <a href="#" class="m-card-link">Continue Reading →</a>
+          </div>
+        </article>
+
+        <!-- Card 2 – short -->
+        <article class="m-card m-card--short">
+          <a href="#" class="m-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&auto=format&fit=crop&q=80" alt="French Toast" class="m-card-img" loading="lazy"/>
+            <span class="m-card-cat breakfast">Breakfast</span>
+          </a>
+          <div class="m-card-body">
+            <div class="m-card-meta"><span class="m-card-date">June 9, 2025</span><span class="m-card-read">4 min read</span></div>
+            <h3 class="m-card-title"><a href="#">Brioche French Toast Done Right</a></h3>
+            <p class="m-card-excerpt">Thick-cut brioche, vanilla custard, a cast iron pan. The weekend breakfast you've been sleeping on.</p>
+            <a href="#" class="m-card-link">Continue Reading →</a>
+          </div>
+        </article>
+
+        <!-- Card 3 – medium -->
+        <article class="m-card m-card--medium">
+          <a href="#" class="m-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&auto=format&fit=crop&q=80" alt="Smash Burger" class="m-card-img" loading="lazy"/>
+            <span class="m-card-cat lunch">Lunch</span>
+          </a>
+          <div class="m-card-body">
+            <div class="m-card-meta"><span class="m-card-date">June 6, 2025</span><span class="m-card-read">6 min read</span></div>
+            <h3 class="m-card-title"><a href="#">Science of the Smash Burger: Why Flat is Fantastic</a></h3>
+            <p class="m-card-excerpt">The Maillard reaction, the griddle temp, the cheese melt window — we geek out so your burger doesn't have to.</p>
+            <a href="#" class="m-card-link">Continue Reading →</a>
+          </div>
+        </article>
+
+        <!-- Card 4 – short -->
+        <article class="m-card m-card--short">
+          <a href="#" class="m-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&auto=format&fit=crop&q=80" alt="Chocolate Cake" class="m-card-img" loading="lazy"/>
+            <span class="m-card-cat dessert">Desserts</span>
+          </a>
+          <div class="m-card-body">
+            <div class="m-card-meta"><span class="m-card-date">June 3, 2025</span><span class="m-card-read">5 min read</span></div>
+            <h3 class="m-card-title"><a href="#">Molten Chocolate Lava Cake in 20 Minutes</a></h3>
+            <p class="m-card-excerpt">Dark chocolate, a hot oven, and good timing. Your dinner party finale sorted.</p>
+            <a href="#" class="m-card-link">Continue Reading →</a>
+          </div>
+        </article>
+
+        <!-- Card 5 – tall -->
+        <article class="m-card m-card--tall">
+          <a href="#" class="m-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&auto=format&fit=crop&q=80" alt="Grain Bowl" class="m-card-img" loading="lazy"/>
+            <span class="m-card-cat snack">Snacks</span>
+          </a>
+          <div class="m-card-body">
+            <div class="m-card-meta"><span class="m-card-date">May 30, 2025</span><span class="m-card-read">7 min read</span></div>
+            <h3 class="m-card-title"><a href="#">The Rainbow Grain Bowl Formula You Can Remix Forever</a></h3>
+            <p class="m-card-excerpt">One base, one protein, three colors of veg, one sauce. We've been eating this for lunch every week and it never gets old because we never stop changing it. Here's the framework and our 12 favorite combinations.</p>
+            <a href="#" class="m-card-link">Continue Reading →</a>
+          </div>
+        </article>
+
+        <!-- Card 6 – medium -->
+        <article class="m-card m-card--medium">
+          <a href="#" class="m-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&auto=format&fit=crop&q=80" alt="Cocktail" class="m-card-img" loading="lazy"/>
+            <span class="m-card-cat drinks">Drinks</span>
+          </a>
+          <div class="m-card-body">
+            <div class="m-card-meta"><span class="m-card-date">May 27, 2025</span><span class="m-card-read">5 min read</span></div>
+            <h3 class="m-card-title"><a href="#">Summer Shrubs: The Fermented Drinks That Belong on Your Table</a></h3>
+            <p class="m-card-excerpt">Fruit, vinegar, and time. These drinking vinegars are tart, refreshing, and endlessly customizable. </p>
+            <a href="#" class="m-card-link">Continue Reading →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-cta-center">
+        <a href="#" class="btn-primary btn-large">View All Posts →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FEATURED RECIPES ═══════════════ -->
+  <section class="featured-recipes section-pad section-alt" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Chef's Picks</span>
+        <h2 class="section-title">Featured <em>Recipes</em></h2>
+        <p class="section-sub">Handpicked for flavor, technique, and the kind of satisfaction that keeps you coming back.</p>
+      </div>
+
+      <div class="featured-grid">
+
+        <div class="feat-card feat-card--hero">
+          <div class="feat-img-wrap">
+            <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&auto=format&fit=crop&q=80" alt="Pasta" class="feat-img" loading="lazy"/>
+            <div class="feat-overlay">
+              <span class="feat-cat">Dinner</span>
+            </div>
+          </div>
+          <div class="feat-body">
+            <div class="feat-tags">
+              <span class="tag tag--time">⏱ 45 min</span>
+              <span class="tag tag--diff easy">Easy</span>
+            </div>
+            <h3 class="feat-title">Cacio e Pepe: Rome's Greatest Two-Ingredient Miracle</h3>
+            <p class="feat-excerpt">Cheese and pepper. Sounds too simple. Tastes like a Roman piazza on a warm evening. We break down the emulsification technique that makes this pasta extraordinary.</p>
+            <div class="feat-footer">
+              <div class="feat-author">
+                <div class="author-avatar" style="background:#52B788">MC</div>
+                <div>
+                  <strong>Marco Chen</strong>
+                  <span>Italian specialist</span>
+                </div>
+              </div>
+              <a href="#" class="btn-primary btn-sm">Make It</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="feat-side-stack">
+
+          <div class="feat-card feat-card--side">
+            <div class="feat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=400&auto=format&fit=crop&q=80" alt="Waffles" class="feat-img" loading="lazy"/>
+            </div>
+            <div class="feat-body">
+              <div class="feat-tags">
+                <span class="tag tag--time">⏱ 30 min</span>
+                <span class="tag tag--diff easy">Easy</span>
+              </div>
+              <h3 class="feat-title">Yeasted Belgian Waffles</h3>
+              <p class="feat-excerpt">Overnight fermentation unlocks a depth of flavor no quick batter can match. Crisp outside, cloud-soft inside.</p>
+              <a href="#" class="btn-outline btn-sm">View Recipe →</a>
+            </div>
+          </div>
+
+          <div class="feat-card feat-card--side">
+            <div class="feat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=400&auto=format&fit=crop&q=80" alt="Soup" class="feat-img" loading="lazy"/>
+            </div>
+            <div class="feat-body">
+              <div class="feat-tags">
+                <span class="tag tag--time">⏱ 1 hr</span>
+                <span class="tag tag--diff medium">Medium</span>
+              </div>
+              <h3 class="feat-title">Roasted Tomato Bisque</h3>
+              <p class="feat-excerpt">Slow-roasted tomatoes with cream and fresh basil. The soup that turns a grey day golden.</p>
+              <a href="#" class="btn-outline btn-sm">View Recipe →</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TRENDING ═══════════════ -->
+  <section class="trending section-pad" id="trending">
+    <div class="container">
+      <div class="section-header section-header--split">
+        <div>
+          <span class="section-eyebrow">What's Hot Right Now</span>
+          <h2 class="section-title">Trending <em>This Week</em></h2>
+        </div>
+        <a href="#" class="btn-outline">See All →</a>
+      </div>
+
+      <div class="trending-list">
+
+        <div class="trend-item">
+          <span class="trend-num">01</span>
+          <div class="trend-img-wrap">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200&auto=format&fit=crop&q=80" alt="Pizza" loading="lazy"/>
+          </div>
+          <div class="trend-body">
+            <span class="trend-cat">Dinner</span>
+            <h4 class="trend-title"><a href="#">Neapolitan Pizza Dough: The 72-Hour Ferment Method</a></h4>
+            <div class="trend-meta"><span>⏱ 72 hrs + 15 min</span><span>🔥 4,821 saves</span></div>
+          </div>
+        </div>
+
+        <div class="trend-item">
+          <span class="trend-num">02</span>
+          <div class="trend-img-wrap">
+            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=200&auto=format&fit=crop&q=80" alt="Ramen" loading="lazy"/>
+          </div>
+          <div class="trend-body">
+            <span class="trend-cat">Dinner</span>
+            <h4 class="trend-title"><a href="#">Tonkotsu Ramen from Scratch: A Weekend Project</a></h4>
+            <div class="trend-meta"><span>⏱ 10 hrs</span><span>🔥 3,907 saves</span></div>
+          </div>
+        </div>
+
+        <div class="trend-item">
+          <span class="trend-num">03</span>
+          <div class="trend-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=200&auto=format&fit=crop&q=80" alt="Croissant" loading="lazy"/>
+          </div>
+          <div class="trend-body">
+            <span class="trend-cat">Breakfast</span>
+            <h4 class="trend-title"><a href="#">Butter Croissants: Lamination Demystified</a></h4>
+            <div class="trend-meta"><span>⏱ 2 days</span><span>🔥 3,644 saves</span></div>
+          </div>
+        </div>
+
+        <div class="trend-item">
+          <span class="trend-num">04</span>
+          <div class="trend-img-wrap">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=200&auto=format&fit=crop&q=80" alt="Smoothie" loading="lazy"/>
+          </div>
+          <div class="trend-body">
+            <span class="trend-cat">Drinks</span>
+            <h4 class="trend-title"><a href="#">Green Goddess Smoothie: 5 Ingredients, Zero Compromise</a></h4>
+            <div class="trend-meta"><span>⏱ 5 min</span><span>🔥 2,991 saves</span></div>
+          </div>
+        </div>
+
+        <div class="trend-item">
+          <span class="trend-num">05</span>
+          <div class="trend-img-wrap">
+            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=200&auto=format&fit=crop&q=80" alt="Dumplings" loading="lazy"/>
+          </div>
+          <div class="trend-body">
+            <span class="trend-cat">Snacks</span>
+            <h4 class="trend-title"><a href="#">Pan-Fried Pork Dumplings (Gyoza Style)</a></h4>
+            <div class="trend-meta"><span>⏱ 1 hr 20 min</span><span>🔥 2,540 saves</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ NEWSLETTER ═══════════════ -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="newsletter-inner container">
+      <div class="newsletter-text">
+        <span class="section-eyebrow light">Get It Fresh</span>
+        <h2 class="newsletter-title">Recipes in your inbox,<br/><em>every Sunday morning.</em></h2>
+        <p>No spam. No meal kits. Just honest recipes, kitchen tips, and the occasional story about something that went beautifully wrong.</p>
+        <ul class="newsletter-perks">
+          <li>✅ Weekly recipe digest</li>
+          <li>✅ Exclusive techniques</li>
+          <li>✅ Seasonal guides</li>
+          <li>✅ Unsubscribe anytime</li>
+        </ul>
+      </div>
+      <div class="newsletter-form-wrap">
+        <div class="newsletter-card">
+          <h3>Join 24,000+ home cooks</h3>
+          <form class="newsletter-form" id="newsletter-form" novalidate>
+            <div class="form-group">
+              <label for="nl-name">First Name</label>
+              <input type="text" id="nl-name" placeholder="Your first name" />
+            </div>
+            <div class="form-group">
+              <label for="nl-email">Email Address</label>
+              <input type="email" id="nl-email" placeholder="you@example.com" />
+            </div>
+            <button type="submit" class="btn-primary btn-block">Send Me Recipes 🌿</button>
+            <p class="form-note">By subscribing you agree to our Privacy Policy.</p>
+          </form>
+          <div class="form-success" id="form-success" hidden>
+            <div class="success-icon">🎉</div>
+            <h4>You're in!</h4>
+            <p>Watch your inbox this Sunday for your first recipe drop.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ INSTAGRAM GALLERY ═══════════════ -->
+  <section class="gallery-section section-pad" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Follow Along</span>
+        <h2 class="section-title">From Our <em>Kitchen to Yours</em></h2>
+        <p class="section-sub">Tag <strong>@FryCuisine</strong> on Instagram and you might end up here.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="g-item g-item--lg">
+          <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=600&auto=format&fit=crop&q=80" alt="Food gallery 1" loading="lazy"/>
+          <div class="g-overlay"><span>@sarah.eats</span></div>
+        </div>
+        <div class="g-item">
+          <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=400&auto=format&fit=crop&q=80" alt="Food gallery 2" loading="lazy"/>
+          <div class="g-overlay"><span>@tomkitchen</span></div>
+        </div>
+        <div class="g-item">
+          <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&auto=format&fit=crop&q=80" alt="Food gallery 3" loading="lazy"/>
+          <div class="g-overlay"><span>@frycuisine</span></div>
+        </div>
+        <div class="g-item">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&auto=format&fit=crop&q=80" alt="Food gallery 4" loading="lazy"/>
+          <div class="g-overlay"><span>@chefmaria</span></div>
+        </div>
+        <div class="g-item">
+          <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=400&auto=format&fit=crop&q=80" alt="Food gallery 5" loading="lazy"/>
+          <div class="g-overlay"><span>@lunchwithlena</span></div>
+        </div>
+        <div class="g-item g-item--lg">
+          <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&auto=format&fit=crop&q=80" alt="Food gallery 6" loading="lazy"/>
+          <div class="g-overlay"><span>@frycuisine</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="site-footer">
+    <div class="footer-top container">
+
+      <div class="footer-brand">
+        <a href="#" class="logo logo--white">
+          <span class="logo-icon">🌿</span>
+          <span class="logo-text">Fry<em>Cuisine</em></span>
+        </a>
+        <p>A food blog celebrating the joy of cooking from scratch. Real kitchens. Real flavors. Real stories.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">All Recipes</a></li>
+          <li><a href="#">Blog Posts</a></li>
+          <li><a href="#">Video Tutorials</a></li>
+          <li><a href="#">Cookbook</a></li>
+          <li><a href="#">Kitchen Tools</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#">🍳 Breakfast</a></li>
+          <li><a href="#">🥗 Lunch</a></li>
+          <li><a href="#">🍝 Dinner</a></li>
+          <li><a href="#">🍰 Desserts</a></li>
+          <li><a href="#">🍹 Drinks</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Meet the Team</a></li>
+          <li><a href="#">Work with Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom container">
+      <p>© 2025 FryCuisine. Made with love and too much butter.</p>
+      <p>Designed with 🌿 for home cooks everywhere.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+        </html>
